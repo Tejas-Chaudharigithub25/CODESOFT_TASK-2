@@ -1,0 +1,42 @@
+<?php
+session_start();
+
+    include 'comp/header.php';
+    
+?>
+    
+      <!-- <div class="container my-4">
+        <div class="row">
+                <h3 class="text-primary"> About Us</h3>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">About Us</li>
+                </ol>
+        </div>
+      </div> -->
+
+      <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img width="100%" src="data:image/jpeg;base64,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">
+            </div>
+            <div class="col-md-6">
+                <div class="p text-justify">
+                Welcome to Wanderlust Journeys - Your Ultimate Travel Booking Companion!
+
+At Wanderlust Journeys, we're passionate about turning your travel dreams into reality. Whether you're an adventure seeker, a culture enthusiast, or simply in need of a relaxing getaway, we're here to make your journey unforgettable.
+
+Our mission is to provide you with a seamless and inspiring travel booking experience. With a vast selection of destinations, accommodations, and activities to choose from, you can tailor your trips according to your preferences. Our user-friendly platform ensures that you can explore, plan, and book your travels effortlessly.
+
+Backed by a team of travel experts and enthusiasts, we strive to offer personalized recommendations and top-notch customer support every step of the way. Your satisfaction is our priority, and we're committed to ensuring that every trip you embark on through Wanderlust Journeys is marked by excitement, convenience, and incredible memories.
+
+Join us in discovering the world's wonders, one booking at a time. Let's create unforgettable adventures together with Wanderlust Journeys!
+                </div>
+            </div>
+        </div>
+      </div>
+     
+    <!-- <hr style="background-color: rgb(145, 37, 233); height: 3px;"> -->
+<?php
+    include 'comp/footer.php'
+?>
